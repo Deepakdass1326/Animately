@@ -16,7 +16,7 @@ const navigate = useNavigate()
         <div className="flex items-center gap-6 text-lg font-light text-white">
         
         <h3
-           onClick={() => navigate("/", { state: { scrollTo: "courses" } })}
+           onClick={() => navigate("/Courses")}
           className="cursor-pointer hover:text-purple-500"
         >
           Courses

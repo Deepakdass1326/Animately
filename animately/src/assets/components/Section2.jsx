@@ -65,7 +65,7 @@ const Section2 = () => {
         What our students say
       </h2>
 
-      <div className="flex justify-center mb-40">
+      <div className="flex justify-center ">
         <div className="
           flex items-center gap-16
           w-[1100px] h-[360px]
@@ -98,22 +98,7 @@ const Section2 = () => {
         </div>
       </div>
 
-      {/* ===== CTA ===== */}
-      <div className="text-center text-white">
-        <h2 className="text-5xl font-medium leading-tight mb-10">
-          Start learning <br />
-          animation today
-        </h2>
-
-        <div className="flex justify-center gap-6">
-          <button className="bg-purple-300 text-black px-8 py-4 rounded-xl font-medium hover:scale-105 transition">
-            Sign up for free
-          </button>
-          <button className="border border-white/20 px-8 py-4 rounded-xl hover:bg-white/5 transition">
-            Learn more
-          </button>
-        </div>
-      </div>
+      
 
     </section>  
   )

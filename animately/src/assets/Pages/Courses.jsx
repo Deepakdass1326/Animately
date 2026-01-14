@@ -2,7 +2,7 @@ import React from "react";
 
 const Courses = () => {
   return (
-    <div id="courses" className=" relative w-full  bg-[#171417] flex flex-col items-center">
+    <div className=" relative w-full  bg-[#171417] flex flex-col items-center">
       <h2 className="text-white text-center text-6xl leading-tight font-bold my-20 py-8">
         Interactive online <br />
         lessons at your <span className="relative inline-block">pace</span>

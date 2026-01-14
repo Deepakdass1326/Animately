@@ -2,7 +2,28 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#171417] px-24 pt- pb-16 ">
+
+
+    
+
+    <footer className="w-full bg-[#171417]  px-24 pt-  ">
+
+         {/* ===== GLOBAL CTA ===== */}
+      <div className="text-center text-white mb-20">
+        <h2 className="text-5xl font-medium leading-tight mb-8">
+          Start learning <br />
+          animation today
+        </h2>
+
+        <div className="flex justify-center gap-6">
+          <button className="bg-purple-300 text-black px-8 py-4 rounded-xl font-medium hover:scale-105 transition">
+            Sign up for free
+          </button>
+          <button className="border border-white/20 px-8 py-4 rounded-xl hover:bg-white/5 transition">
+            Learn more
+          </button>
+        </div>
+      </div>
       
       {/* Top CTA Divider */}
       <div className="border-t border-white/10 mb-20"></div>
@@ -73,6 +94,9 @@ const Footer = () => {
           </p>
         </div>
       </div>
+
+
+
     </footer>
   );
 };
