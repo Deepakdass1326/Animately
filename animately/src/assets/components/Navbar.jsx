@@ -1,24 +1,55 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+
+const navigate = useNavigate()
+
   return (
     <nav className="flex items-center justify-between bg-[#171417] px-22 py-10">
       
       {/* Logo */}
-      <div>
-        <img className="h-12 w-auto" src="logo.svg" alt="Logo" />
+      <div onClick={() => navigate('/')} >
+        <img className="h-12 w-auto cursor-pointer" src="logo.svg" alt="Logo" />
       </div>
 
-      {/* Nav Links */}
-      <div className="flex items-center gap-6 text-lg font-light text-white">
-        {["Courses", "Pricing", "FAQ", "Blog", "Contact"].map((item) => (
-          <h3
-            key={item}
-            className="cursor-pointer transition-colors duration-200 hover:text-purple-500"
-          >
-            {item}
-          </h3>
-        ))}
+        <div className="flex items-center gap-6 text-lg font-light text-white">
+        
+        <h3
+           onClick={() => navigate("/", { state: { scrollTo: "courses" } })}
+          className="cursor-pointer hover:text-purple-500"
+        >
+          Courses
+        </h3>
+
+        <h3
+          onClick={() => navigate("/pricing")}
+          className="cursor-pointer hover:text-purple-500"
+        >
+          Pricing
+        </h3>
+
+        <h3
+          onClick={() => navigate("/faq")}
+          className="cursor-pointer hover:text-purple-500"
+        >
+          FAQ
+        </h3>
+
+        <h3
+          onClick={() => navigate("/blog")}
+          className="cursor-pointer hover:text-purple-500"
+        >
+          Blog
+        </h3>
+
+        <h3
+          onClick={() => navigate("/contact")}
+          className="cursor-pointer hover:text-purple-500"
+        >
+          Contact
+        </h3>
+
       </div>
 
       {/* Auth Buttons */}

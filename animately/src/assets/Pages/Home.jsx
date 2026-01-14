@@ -1,7 +1,28 @@
-import React from "react";
 
-const Hero = () => {
+import Courses from "./Courses";
+import Section1 from "../components/Section1";
+import Section2 from "../components/Section2";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+const Home = () => {
+
+
+    const location = useLocation();
+
+     useEffect(() => {
+    if (location.state?.scrollTo === "courses") {
+      document
+        .getElementById("courses")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
+
   return (
+   
+
+
+    <>
     <div className=" relative flex items-center justify-around gap-10 bg-[#171417] py-18">
       
       {/* Text Section */}
@@ -58,7 +79,17 @@ const Hero = () => {
 
 
     </div>
+
+      
+      <Courses/>
+      <Section1/>
+      <Section2/>
+     
+
+    </>
+
+
   );
 };
 
-export default Hero;
+export default Home;
