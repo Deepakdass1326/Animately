@@ -2,21 +2,21 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-
-const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
-    <nav className="flex items-center justify-between bg-[#171417] px-22 py-10">
-      
-      {/* Logo */}
-      <div onClick={() => navigate('/')} >
-        <img className="h-12 w-auto cursor-pointer" src="logo.svg" alt="Logo" />
+    <nav className="flex items-center justify-between bg-[#171417] px-6 sm:px-10 lg:px-22 py-6 sm:py-8 lg:py-10">
+      <div onClick={() => navigate("/")}>
+        <img
+          className="h-10 sm:h-12 w-auto cursor-pointer"
+          src="logo.svg"
+          alt="Logo"
+        />
       </div>
 
-        <div className="flex items-center gap-6 text-lg font-light text-white">
-        
+      <div className="hidden md:flex items-center gap-6 text-lg font-light text-white">
         <h3
-           onClick={() => navigate("/Courses")}
+          onClick={() => navigate("/Courses")}
           className="cursor-pointer hover:text-purple-500"
         >
           Courses
@@ -49,20 +49,18 @@ const navigate = useNavigate()
         >
           Contact
         </h3>
-
       </div>
 
-      {/* Auth Buttons */}
-      <div className="flex items-center gap-6">
-        <button className="text-sm px-7 py-3 text-purple-400 rounded border-2 transition-colors duration-200 hover:text-purple-300">
-          Log in
-        </button>
+     <div className="flex items-center gap-4 sm:gap-6">
+  <button className="h-11 sm:h-12 px-6 sm:px-7 text-xs sm:text-sm text-purple-400 border-2 border-purple-300 rounded-md transition-colors duration-200 hover:text-purple-300 hover:border-purple-300
+  hover:scale-105 transition">
+    Log in
+  </button>
 
-        <button className="rounded-md bg-purple-500 px-7 py-4 text-sm text-white transition-all duration-200 hover:bg-purple-600">
-          Sign up
-        </button>
-      </div>
-
+  <button className="h-11 sm:h-12 px-6 sm:px-7 text-xs sm:text-sm text-white bg-purple-400 rounded-md transition-all duration-200 hover:scale-105 transition">
+    Sign up
+  </button>
+</div>
     </nav>
   );
 };

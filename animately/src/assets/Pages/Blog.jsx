@@ -56,14 +56,14 @@ const Blog = () => {
       </div>
 
       {/* FEATURED POST */}
-      <div className="max-w-5xl mx-auto bg-[#1f1b1f] rounded-3xl flex flex-col md:flex-row overflow-hidden mb-20">
+      <div className="max-w-5xl mx-auto bg-[#1f1b1f] rounded-3xl flex flex-col md:flex-row overflow-hidden mb-20 border border-white/10 bg-white/[0.02]">
         <img
           src={featuredPost.image}
           className="md:w-1/2 h-72 md:h-auto object-cover"
           alt=""
         />
 
-        <div className="p-8 flex flex-col justify-center">
+        <div className="p-8 flex flex-col justify-center ">
           <span className="text-purple-400 text-sm mb-3">
             {featuredPost.tag}
           </span>
@@ -75,14 +75,14 @@ const Blog = () => {
       </div>
 
       {/* ALL POSTS */}
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto ">
         <h3 className="text-xl mb-8">All posts</h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {posts.map((post, i) => (
             <div
               key={i}
-              className="bg-[#1f1b1f] rounded-2xl overflow-hidden hover:scale-[1.02] transition"
+              className="bg-[#1f1b1f] rounded-2xl overflow-hidden hover:scale-[1.02] transition border border-white/10 bg-white/[0.02]"
             >
               <img
                 src={post.image}
@@ -106,15 +106,6 @@ const Blog = () => {
         </div>
       </div>
 
-      {/* CTA */}
-      <div className="text-center mt-32">
-        <h2 className="text-4xl font-medium mb-6">
-          Start learning <br /> animation today
-        </h2>
-        <button className="bg-purple-500 px-6 py-3 rounded-full text-white">
-          Get Started
-        </button>
-      </div>
     </div>
   );
 };

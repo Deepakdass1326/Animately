@@ -38,7 +38,7 @@ const FAQ = () => {
         {faqs.map((item, index) => (
           <div
             key={index}
-            className="bg-[#1f1b1f] rounded-2xl px-6 py-5 cursor-pointer  "
+            className="bg-[#1f1b1f] rounded-2xl px-6 py-5 cursor-pointer border border-white/10 bg-white/[0.02] "
             onClick={() =>
               setActiveIndex(activeIndex === index ? null : index)
             }
